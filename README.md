@@ -6,10 +6,6 @@ Used **SQLAlchemy** to transform users and blog posts data between **SQLite** da
 Designed and Developed front-end using **HTML/CSS/JS, Bootstrap 5 and Jinja template **
 
 
-**Backend**: Flask, SQLite
-
-**Frontend**: HTML/CSS/JS, Bootstrap 5 and Jinja template 
-
 
 ## Installation
 
