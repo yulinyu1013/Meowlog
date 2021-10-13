@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content%}
+
+<div class="text-center" style="height: 100%; width:100%; 
+min-height: 100vh;  background-image:url(https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);
+background-repeat: no-repeat; background-size: cover">
+    <div style=" background-color:rgba(94, 94, 94, 0.4); width: 100%; height: 100vh;display: flex; justify-content: center; align-items: center; ">
+    <div style="color:white; ">
+        <h1 class="cover-heading" >Welcome to Meowlog! &#128008; </h1>
+        <p class="lead"><strong>A cozy place for you to share and see lovely moments of cats! Stay PAWsitive!</strong></p>
+        <p class="lead">
+            <a href="{{url_for('core.index')}}" class="btn btn-lg btn-secondary info-btn" role="button" style="background-color:bisque; border-color: bisque; color: rgb(40, 39, 39);"><strong>Learn meow!</strong></a>
+        </p>
+    </div>
+</div>
+       
+</div>
+
+
+{% endblock %}

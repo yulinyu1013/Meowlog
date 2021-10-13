@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+  <div class="container" style=" height: 100%;  background-color: rgba(255, 254, 248, 0.591); padding: 120px;" >
+    <div class="mb-3" align='center'>
+      <h2 >Account Page for {{current_user.username}}</h2>
+      <img align='center' width="400" height="300" src="{{ url_for('static', filename='profile_pics/' + current_user.profile_image) }}">
+      <p>{{ current_user.email }}</p>
+    </div>
+
+    <div class="col-6 offset-3">
+      <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-group mb-3">
+          {{ form.username.label(class="form-group") }}
+          {{form.username(class='form-control')  }}
+        </div>
+        <div class="form-group mb-3">
+          {{ form.email.label(class="form-group") }}
+          {{form.email(class='form-control') }}
+        </div>
+
+        <div class="form-group mb-3">
+          {{ form.picture.label(class="form-group") }} <br>
+          {{ form.picture(class="form-control-file") }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.submit(class="btn btn-primary",style="background-color:bisque; border-color: bisque; color: rgb(40, 39, 39);") }}
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content%}
+
+<div style="background-image: url(https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2F0fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);
+height: 100%; width:100%; min-height: 100vh; background-repeat: no-repeat; background-size: cover">
+    <div style=" background-color:rgba(255, 238, 210, 0.2); width: 100%; height: 100vh;display: flex; justify-content: center; align-items: center; ">
+        <div class="container">
+            <div class="col-4 justify-content-center" >
+                <h2 class="mb-3">Register &#128062;</h2>
+                <form method="POST">
+
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    {{form.email(class_="form-control", id='email')}} 
+                </div>
+                <div class="form-group mb-3">
+                    <label for="username">Username</label>
+                    {{form.username(class_="form-control", id='username')}} 
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password">Password</label>
+                    {{form.password(class_="form-control", id="password")}} 
+                </div>
+                <div class="form-group mb-3">
+                    <label for="pass_confirm">Confirm Password </label>
+                    {{form.pass_confirm(class_="form-control",id='pass_confirm')}} 
+                </div>
+
+                {{form.submit(type="submit", class="btn btn-primary",style="background-color:bisque; border-color: bisque; color: rgb(40, 39, 39);")}} 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

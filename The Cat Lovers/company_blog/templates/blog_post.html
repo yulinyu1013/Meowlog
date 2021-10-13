@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+    <div class="container">
+      <div class="col-6 offset-3">
+        <p>
+          <h2>{{post.title}}</h2>
+          Written by: {{post.author.username}} <br> {{post.date.strftime('%B %d, %Y')}}
+        </p> 
+        
+        <p><h5>{{post.text}}</h5></p>
+        <img align='center' width="300" height="300" src="../static/post_pics/cat3.jpg">
+       
+
+
+
+        
+        {%if(post.author == current_user)%}
+        <div>
+            <a href="{{url_for('blog_posts.update', blog_post_id=post.id)}}">Update</a>
+            <button class="btn btn-danger" type="button" data-toggle='modal', data-target="#del_modal">Delete</button>
+            <!-- data-toggle links to a pop-up -->
+        </div>
+        {%endif%}
+      </div>
+    </div>
+    
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="del_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete Post?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete the post?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+        <form action="{{url_for('blog_posts.delete_post',blog_post_id=post.id)}}" method="post">
+          <input class="btn btn-danger" type="submit" value="Delete">
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

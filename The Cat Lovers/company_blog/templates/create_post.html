@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container" style="height: 130%; background-color: rgba(255, 254, 248, 0.591); padding: 250px;" >
+        <div class="col-8 offset-2 mt-3">
+            <h2>Create Your Meow Post</h2>
+            <form action="" class="form-group" method="POST">
+                {{form.hidden_tag()}}
+    
+                <div class="form-group mb-3">
+                    {{form.title.label(class="form-control-label")}}
+                    {{form.title(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group mb-3">
+                    {{form.text.label(class="form-control-label")}}
+                    {{form.text(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group mb-3">
+                    {{form.pic.label(class="form-control-label")}}
+                    {{form.pic(class="form-control form-control")}}
+                </div>
+                <div class="form-group">
+                    {{form.submit(class="btn btn-primary",style="background-color:bisque; border-color: bisque; color: rgb(40, 39, 39);")}}
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
