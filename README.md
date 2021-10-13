@@ -1,6 +1,11 @@
 # Meowlog 🐱
 ## About
 
+This is a web app of the cat lovers blog in **Python and Flask framework**
+Used **SQLAlchemy** to transform users and blog posts data between **SQLite** database and the app
+Designed and Developed front-end using **HTML/CSS/JS, Bootstrap 5 and Jinja template **
+
+
 **Backend**: Flask, SQLite
 
 **Frontend**: HTML/CSS/JS, Bootstrap 5 and Jinja template 
